@@ -1,5 +1,5 @@
 {
-	"name": "react-eslint-config",
+	"name": "@slotovi4/react-eslint-config",
 	"version": "1.0.0",
 	"description": "React eslint config",
 	"main": "index.js",
@@ -12,8 +12,12 @@
 		"config",
 		"react"
 	],
-	"author": "Bruhns Roman",
+	"author": "slotovi4",
 	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/slotovi4/react-eslint-config/issues"
+	},
+	"homepage": "https://github.com/slotovi4/react-eslint-config#readme",
 	"peerDependencies": {
 		"eslint": "^8.2.0",
 		"eslint-plugin-react": "^7.27.0",
