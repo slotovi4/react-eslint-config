@@ -1,0 +1,27 @@
+{
+	"name": "react-eslint-config",
+	"version": "1.0.0",
+	"description": "React eslint config",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/slotovi4/react-eslint-config.git"
+	},
+	"keywords": [
+		"eslint",
+		"config",
+		"react"
+	],
+	"author": "Bruhns Roman",
+	"license": "MIT",
+	"peerDependencies": {
+		"eslint": "^8.2.0",
+		"eslint-plugin-react": "^7.27.0",
+		"eslint-plugin-react-hooks": "^4.3.0"
+	},
+	"devDependencies": {
+		"eslint": "^8.2.0",
+		"eslint-plugin-react": "^7.27.0",
+		"eslint-plugin-react-hooks": "^4.3.0"
+	}
+}
