@@ -1,4 +1,17 @@
 module.exports = {
+	parser: "@typescript-eslint/parser",
+	plugins: [
+		"@typescript-eslint",
+		"import"
+	],
+	parserOptions: {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"project": "./tsconfig.json",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
 	extends: [
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended"
@@ -6,11 +19,6 @@ module.exports = {
 	settings: {
 		"react": {
 			"version": "detect"
-		}
-	},
-	parserOptions: {
-		"ecmaFeatures": {
-			"jsx": true
 		}
 	},
 	rules: {
