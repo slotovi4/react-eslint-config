@@ -1,17 +1,7 @@
 module.exports = {
-	parser: "@typescript-eslint/parser",
 	plugins: [
-		"@typescript-eslint",
 		"import"
 	],
-	parserOptions: {
-		"ecmaVersion": 2020,
-		"sourceType": "module",
-		"project": "./tsconfig.json",
-		"ecmaFeatures": {
-			"jsx": true
-		}
-	},
 	extends: [
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended"
@@ -45,5 +35,25 @@ module.exports = {
 				"when": "multiline"
 			}
 		]
-	}
+	},
+	overrides: [
+		{
+			files: ["**/*.ts?(x)"],
+			parser: "@typescript-eslint/parser",
+			parserOptions: {
+				"ecmaVersion": 2020,
+				"sourceType": "module",
+				"project": "./tsconfig.json",
+				"ecmaFeatures": {
+					"jsx": true
+				}
+			},
+			plugins: [
+				"@typescript-eslint"
+			],
+			extends: [
+				"plugin:@typescript-eslint/recommended"
+			]
+		}
+	],
 }
