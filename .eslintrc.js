@@ -1,7 +1,4 @@
 module.exports = {
-	plugins: [
-		"import"
-	],
 	extends: [
 		"plugin:react/recommended",
 		"plugin:react-hooks/recommended"
@@ -11,15 +8,25 @@ module.exports = {
 			"version": "detect"
 		}
 	},
+	parserOptions: {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
 	rules: {
-		"react/jsx-props-no-multi-spaces": "error",
-		"react/jsx-closing-bracket-location": "error",
-		"react/self-closing-comp": "error",
-		"react/no-unused-prop-types": "warn",
-		"react/jsx-wrap-multilines": "warn",
+		// off
+		"react/react-in-jsx-scope": "off",
 		"react/display-name": "off",
 		"react/prop-types": "off",
-		"react/react-in-jsx-scope": "off",
+
+		// warn
+		"react/no-unused-prop-types": "warn",
+		"react/jsx-wrap-multilines": "warn",
+
+		// error
+		"react/jsx-closing-bracket-location": "error",
+		"react/jsx-props-no-multi-spaces": "error",
+		"react/self-closing-comp": "error",
 		"react/jsx-indent": [
 			"error",
 			"tab"
@@ -34,26 +41,6 @@ module.exports = {
 				"maximum": 1,
 				"when": "multiline"
 			}
-		]
-	},
-	overrides: [
-		{
-			files: ["**/*.ts?(x)"],
-			parser: "@typescript-eslint/parser",
-			parserOptions: {
-				"ecmaVersion": 2020,
-				"sourceType": "module",
-				"project": "./tsconfig.json",
-				"ecmaFeatures": {
-					"jsx": true
-				}
-			},
-			plugins: [
-				"@typescript-eslint"
-			],
-			extends: [
-				"plugin:@typescript-eslint/recommended"
-			]
-		}
-	],
+		],
+	}
 }
